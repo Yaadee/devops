@@ -5,7 +5,7 @@ export default function Home() {
         <div>
 
             Wecome to pipeline test!
-            How about now
+            How about now, lets test jenkins now
             
         </div>
     )
