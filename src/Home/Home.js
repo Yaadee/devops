@@ -6,7 +6,7 @@ export default function Home() {
 
             Wecome to pipeline test!
             How about now, lets test jenkins now
-            <h> edited</h>
+            <h> edited hello</h>
             
         </div>
     )
