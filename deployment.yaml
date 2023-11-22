@@ -1,19 +1,33 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: yadeko
+  name: node-app-deployment
 spec:
-  replicas: 1
+  replicas: 3 # Adjust the number of replicas as needed
   selector:
     matchLabels:
-      app: yadeko
+      app: node-app
   template:
     metadata:
       labels:
-        app: yadeko
+        app: node-app
     spec:
       containers:
-        - name: yadeko-container
-          image: yadasa/yade
+        - name: node-app-container
+          image: yadasa/yadeko:latest
           ports:
-            - containerPort: 9090
+            - containerPort: 3000 # Port your Node.js app is listening on
+
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: node-app-service
+spec:
+  selector:
+    app: node-app
+  ports:
+    - protocol: TCP
+      port: 80 # Expose your service on port 80 externally
+      targetPort: 3000 # Port your Node.js app is listening on within the pod
+  type: NodePort # Expose the service on a static port on each node
