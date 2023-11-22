@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: yadeko
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: yadeko
+  template:
+    metadata:
+      labels:
+        app: yadeko
+    spec:
+      containers:
+        - name: yadeko-container
+          image: yadasa/yade
+          ports:
+            - containerPort: 9090
