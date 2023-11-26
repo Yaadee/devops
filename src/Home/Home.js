@@ -7,7 +7,7 @@ export default function Home() {
             Wecome to pipeline test!
             How about now lets test jenkins now
 
-            <h1> Hi now docker welcome testin ci</h1>
+            <h1> Hi now docker welcome testing ci</h1>
             
         </div>
     )
