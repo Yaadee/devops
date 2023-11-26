@@ -1,2 +1,6 @@
 node_modules
+<<<<<<< HEAD
 echo "# devops" >> README.mdcdcd
+=======
+echo "# devops" >> README.md
+>>>>>>> 93a9db2433e36ef962c7ad078203318bf0126168
