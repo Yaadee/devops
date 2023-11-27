@@ -7,11 +7,7 @@ import reportWebVitals from './reportWebVitals';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-<<<<<<< HEAD
-    <App/>
-=======
     <App />
->>>>>>> 93a9db2433e36ef962c7ad078203318bf0126168
   </React.StrictMode>
 );
 
